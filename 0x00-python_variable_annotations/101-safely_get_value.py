@@ -5,9 +5,10 @@ from typing import Any, Union, Mapping, TypeVar
 
 T = TypeVar('T')
 Ret = Union[Any, T]
-dft = Union[T, None]
+Dft = Union[T, None]
 
-def safely_get_value(dct: Mapping, key: Any, default: dft = None) -> Ret:
+
+def safely_get_value(dct: Mapping, key: Any, default: Dft = None) -> Ret:
     """return a value if the key in dic or default
     """
     if key in dct:
